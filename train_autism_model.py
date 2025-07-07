@@ -151,3 +151,18 @@ plt.show()
 
 # Save importance CSV
 importances_df.to_csv("models/autism_feature_importance.csv", index=False)
+
+from sklearn.metrics import roc_curve
+
+fpr, tpr, _ = roc_curve(y_test, y_proba)
+
+plt.figure(figsize=(6, 5))
+plt.plot(fpr, tpr, label=f"ROC Curve (AUC = {roc_auc:.2f})")
+plt.plot([0, 1], [0, 1], linestyle="--", color="gray")
+plt.xlabel("False Positive Rate")
+plt.ylabel("True Positive Rate")
+plt.title("ROC Curve - Autism Detection")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
