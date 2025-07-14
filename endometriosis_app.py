@@ -25,12 +25,12 @@ def main():
 
     st.header("🩺 Symptom & Medical History")
 
-    menstrual_irregularity = 1 if st.radio("Menstrual Irregularity?", ["Yes", "No"], horizontal=True) == "Yes" else 0
-    infertility = 1 if st.radio("Infertility?", ["Yes", "No"], horizontal=True) == "Yes" else 0
-    chronic_pain_level = st.slider("Chronic Pain Level (0–10)", 0, 10, 5)
-    hormone_level_abnormality = 1 if st.radio("Hormonal Level Abnormality?", ["Yes", "No"], horizontal=True) == "Yes" else 0
-    family_history = 1 if st.radio("Family History of Endometriosis?", ["Yes", "No"], horizontal=True) == "Yes" else 0
-    painful_intercourse = 1 if st.radio("Painful Intercourse?", ["Yes", "No"], horizontal=True) == "Yes" else 0
+    menstrual_irregularity = 1 if st.radio("Do you experience menstrual irregularity?", ["Yes", "No"], horizontal=True) == "Yes" else 0
+    infertility = 1 if st.radio("Have you been diagnosed with or experienced infertility?", ["Yes", "No"], horizontal=True) == "Yes" else 0
+    chronic_pain_level = st.slider("On a scale from 0 to 10, how severe is your chronic pelvic pain?", 0, 10, 5)
+    hormone_level_abnormality = 1 if st.radio("Have you been told or suspect a hormonal level abnormality?", ["Yes", "No"], horizontal=True) == "Yes" else 0
+    family_history = 1 if st.radio("Do you have a family history of endometriosis?", ["Yes", "No"], horizontal=True) == "Yes" else 0
+    painful_intercourse = 1 if st.radio("Do you experience pain during or after sexual intercourse (dyspareunia)?", ["Yes", "No"], horizontal=True) == "Yes" else 0
 
     if st.button("Check Endometriosis Risk"):
         # Manually construct the input DataFrame with engineered features
