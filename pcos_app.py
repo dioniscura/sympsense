@@ -35,17 +35,17 @@ def main():
         elif "aborptions" in clean_feat:
             input_data[feature] = st.selectbox("Number of past abortions (if any)", list(range(0, 6)))
         elif "weight gain" in clean_feat:
-            input_data[feature] = 1 if st.radio("Unusual weight gain?", ["Yes", "No"], horizontal=True) == "Yes" else 0
+            input_data[feature] = 1 if st.radio("Have you experienced unusual weight gain recently?", ["Yes", "No"], horizontal=True) == "Yes" else 0
         elif "hair growth" in clean_feat:
-            input_data[feature] = 1 if st.radio("Excessive hair growth (hirsutism)?", ["Yes", "No"], horizontal=True) == "Yes" else 0
+            input_data[feature] = 1 if st.radio("Have you noticed excessive hair growth (hirsutism)?", ["Yes", "No"], horizontal=True) == "Yes" else 0
         elif "skin darkening" in clean_feat:
-            input_data[feature] = 1 if st.radio("Skin darkening in neck/armpit area?", ["Yes", "No"], horizontal=True) == "Yes" else 0
+            input_data[feature] = 1 if st.radio("Do you have skin darkening in areas such as the neck or armpits?", ["Yes", "No"], horizontal=True) == "Yes" else 0
         elif "hair loss" in clean_feat:
-            input_data[feature] = 1 if st.radio("Hair thinning or loss?", ["Yes", "No"], horizontal=True) == "Yes" else 0
+            input_data[feature] = 1 if st.radio("Have you experienced hair thinning or hair loss?", ["Yes", "No"], horizontal=True) == "Yes" else 0
         elif "pimples" in clean_feat:
-            input_data[feature] = 1 if st.radio("Frequent pimples/acne?", ["Yes", "No"], horizontal=True) == "Yes" else 0
+            input_data[feature] = 1 if st.radio("Have you frequently experienced pimples or acne?", ["Yes", "No"], horizontal=True) == "Yes" else 0
         elif "fast food" in clean_feat:
-            input_data[feature] = 1 if st.radio("Do you often eat fast food?", ["Yes", "No"], horizontal=True) == "Yes" else 0
+            input_data[feature] = 1 if st.radio("Do you often consume fast food?", ["Yes", "No"], horizontal=True) == "Yes" else 0
         elif "exercise" in clean_feat:
             input_data[feature] = 1 if st.radio("Do you exercise regularly?", ["Yes", "No"], horizontal=True) == "Yes" else 0
         else:
