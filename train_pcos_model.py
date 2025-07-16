@@ -22,7 +22,7 @@ cols_to_drop = [
     'LH(mIU/mL)', 'FSH/LH', 'TSH (mIU/L)', 'AMH(ng/mL)', 'PRL(ng/mL)', 'Vit D3 (ng/mL)',
     'PRG(ng/mL)', 'RBS(mg/dl)', 'BP _Systolic (mmHg)', 'BP _Diastolic (mmHg)',
     'Follicle No. (L)', 'Follicle No. (R)', 'Avg. F size (L) (mm)', 'Avg. F size (R) (mm)',
-    'Endometrium (mm)', 'Unnamed: 44', 'Pulse rate(bpm) ', 'RR (breaths/min)', 'Hb(g/dl)'
+    'Endometrium (mm)', 'Unnamed: 44'
 ]
 df.drop(columns=[col for col in cols_to_drop if col in df.columns], inplace=True)
 
