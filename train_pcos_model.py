@@ -78,6 +78,14 @@ grid_search = GridSearchCV(
 grid_search.fit(X_train, y_train)
 best_model = grid_search.best_estimator_
 
+train_sample = X_train.copy()
+train_sample['PCOS (Y/N)'] = y_train.values
+train_sample.head(10).to_csv("annex/pcos_train_sample.csv", index=False)
+
+test_sample = X_test.copy()
+test_sample['PCOS (Y/N)'] = y_test.values
+test_sample.head(10).to_csv("annex/pcos_test_sample.csv", index=False)
+
 # --- Step 3: Evaluate Model ---
 y_pred = best_model.predict(X_test)
 y_proba = best_model.predict_proba(X_test)[:, 1]

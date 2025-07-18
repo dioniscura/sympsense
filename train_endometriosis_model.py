@@ -152,3 +152,11 @@ plt.show()
 
 # Save feature importance
 importance_df.to_csv("models/endometriosis_feature_importance.csv", index=False)
+
+X_train_sample = X_train.copy()
+X_train_sample['diagnosis'] = y_train.values
+X_train_sample.head(10).to_csv("annex/endometriosis_train_sample.csv", index=False)
+
+X_test_sample = X_test.copy()
+X_test_sample['diagnosis'] = y_test.values
+X_test_sample.head(10).to_csv("annex/endometriosis_test_sample.csv", index=False)

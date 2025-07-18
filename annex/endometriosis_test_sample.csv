@@ -1,0 +1,11 @@
+menstrual_irregularity,hormone_level_abnormality,infertility,age_binned,bmi_binned,pain_binned,irregular_pain_combo,infertility_hormone_interact,diagnosis
+0,1,1,0,1,2,0.0,1,1
+1,1,0,2,1,0,1.9640977363134968,0,1
+1,1,0,1,1,2,7.985663782730315,0,0
+0,1,1,0,1,1,0.0,1,0
+0,1,1,0,2,1,0.0,1,1
+1,1,1,2,1,1,5.589661378419389,1,0
+1,1,0,2,2,1,5.220670866318752,0,1
+1,1,0,2,2,1,4.855141860715434,0,1
+0,1,0,2,1,1,0.0,0,1
+0,1,0,0,1,1,0.0,0,0

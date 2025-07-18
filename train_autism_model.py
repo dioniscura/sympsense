@@ -89,6 +89,17 @@ plt.title("Confusion Matrix - Autism Detection")
 plt.tight_layout()
 plt.show()
 
+import os
+os.makedirs("annex", exist_ok=True)
+
+train_sample = X_train.copy()
+train_sample["ASD_Traits"] = y_train
+train_sample.head(10).to_csv("annex/autism_train_sample.csv", index=False)
+
+test_sample = X_test.copy()
+test_sample["ASD_Traits"] = y_test
+test_sample.head(10).to_csv("annex/autism_test_sample.csv", index=False)
+
 # --- Save model and feature names ---
 Path("models").mkdir(exist_ok=True)
 joblib.dump(pipeline, "models/autism_pipeline.pkl")
