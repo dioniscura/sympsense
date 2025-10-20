@@ -56,7 +56,7 @@ def main():
 
         df.drop(columns=['age', 'bmi', 'chronic_pain_level'], inplace=True)
 
-        # Ensure all features present and ordered
+        # Ensure all features present and ordered.
         for col in features:
             if col not in df:
                 df[col] = 0.0
