@@ -11,21 +11,17 @@ st.markdown("""
     <style>
         .block-container {
             padding-top: 0rem;
-            padding-bottom: 4rem;
+            padding-bottom: 1.5rem;
             padding-left: 5rem;
             padding-right: 5rem;
         }
         #MainMenu, footer {visibility: hidden;}
         header {visibility: hidden;}  /* Completely hide default Streamlit header */
 
-        .stApp > div:first-child {
-            margin-top: -50px;
-            padding-top: 0;
-        }
 
         /* Top Navbar */
         .top-navbar {
-            position: sticky;
+            position: fixed;
             top: 0;
             z-index: 999;
             background-color: white;
@@ -34,6 +30,10 @@ st.markdown("""
             justify-content: center;
             gap: 1.5rem;
             margin-bottom: 0;
+        }
+            
+        .stApp {
+            padding-top: 70px !important;
         }
 
         .top-navbar .stButton > button {
