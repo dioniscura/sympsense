@@ -4,7 +4,7 @@ import pcos_app
 import endometriosis_app
 import sympsense_assistant
 
-st.set_page_config(page_title="SympSense App", page_icon="🩺", layout="wide")
+st.set_page_config(page_title="SympSense App", page_icon="🩺", layout="wide", initial_sidebar_state="auto")
 
 # CSS Styling
 st.markdown("""
