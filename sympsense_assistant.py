@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import json
 
-TOGETHER_API_KEY = "bfb7e042033a672a1038b3fc713ab3bc3fb23585e0c2132fc3cc013cde87f04c"
+TOGETHER_API_KEY = "tgp_v1_E6vk_inHoSbaD7_ebgzTI_bkB_bZq5fmHReCKGYAoA0"
 TOGETHER_API_URL = "https://api.together.xyz/v1/chat/completions"
 
 def detect_module_suggestion(user_input):
